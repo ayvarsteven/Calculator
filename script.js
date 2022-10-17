@@ -1,3 +1,10 @@
+// ==================== display ====================
+
+const display = document.querySelector('#display')
+display.textContent = 'displayValue:'
+
+let displayValue = 0;
+
 // ==================== buttons ====================
 
 const addBtn = document.querySelector('#add')
