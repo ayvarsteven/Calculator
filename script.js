@@ -15,3 +15,13 @@ function multiply(a, b) {
 function divide(a, b) {
     return a / b
 }
+
+// ==================== operator function ====================
+
+let array = [];
+
+function operate(a, b, operator) {
+    return operator(a, b)
+}
+
+// ==================== title ====================
