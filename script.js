@@ -5,6 +5,8 @@ display.textContent = 'displayValue:'
 
 let displayValue = 0;
 
+let array = [0, 0,]; 
+
 // ==================== buttons ====================
 
 const addBtn = document.querySelector('#add')
@@ -23,6 +25,18 @@ const sixBtn = document.querySelector('#six')
 const sevenBtn = document.querySelector('#seven')
 const eightBtn = document.querySelector('#eight')
 const nineBtn = document.querySelector('#nine')
+
+addBtn.addEventListener('click', () => {
+    
+})
+equalsBtn.addEventListener('click', () => {
+    console.log(operate(array))
+})
+
+twoBtn.addEventListener('click', () => {
+    
+})
+
 
 // ==================== basic functions ====================
 
@@ -43,8 +57,6 @@ function divide(a, b) {
 }
 
 // ==================== operator function ====================
-
-let array = [];
 
 function operate(a, b, operator) {
     return operator(a, b)
