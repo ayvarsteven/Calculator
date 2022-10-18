@@ -5,7 +5,7 @@ display.textContent = 'displayValue:'
 
 let displayValue = 0;
 
-let array = [0, 0,]; 
+let array = [undefined, undefined, ]; 
 
 // ==================== buttons ====================
 
@@ -27,19 +27,34 @@ const eightBtn = document.querySelector('#eight')
 const nineBtn = document.querySelector('#nine')
 
 addBtn.addEventListener('click', () => {
-    
+    array[2] = sum
+    display.textContent += '+'
+    console.log(array)
+})
+subtractBtn.addEventListener('click', () => {
+    array[2] = subtract
+    console.log(array)
 })
 equalsBtn.addEventListener('click', () => {
-    console.log(operate(array))
+    console.log(operate(...array))
+    display.textContent = operate(...array)
 })
 
 twoBtn.addEventListener('click', () => {
-    
+    if(array[0] === undefined) {
+        array[0] = 2
+        displayValue = array[0]
+        display.textContent += array[0]
+    } else if (array[0] === 2) {
+        array[1] = 2
+        displayValue = array[1]
+        display.textContent += array[1]
+    }
+    console.log(array)
 })
 
 
 // ==================== basic functions ====================
-
 function sum(a, b) {
     return a + b
 }
