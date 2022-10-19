@@ -33,6 +33,17 @@ addBtn.addEventListener('click', () => {
 })
 subtractBtn.addEventListener('click', () => {
     array[2] = subtract
+    display.textContent += '-'
+    console.log(array)
+})
+multiplyBtn.addEventListener('click', () => {
+    array[2] = multiply
+    display.textContent += 'x'
+    console.log(array)
+})
+divideBtn.addEventListener('click', () => {
+    array[2] = divide
+    display.textContent += '÷'
     console.log(array)
 })
 equalsBtn.addEventListener('click', () => {
@@ -41,18 +52,28 @@ equalsBtn.addEventListener('click', () => {
     console.log(operate(...array))
     display.textContent = operate(...array)
 })
+clearBtn.addEventListener('click', () => {
+    array = [undefined, undefined]
+})
 
 twoBtn.addEventListener('click', () => {
     if(array[0] === undefined && array[2] === undefined) {
         array[0] = '2'
+        display.textContent = array[0]
     } else if (typeof array[0] === 'string' && array[2] === undefined) {
         array[0] += '2'
+        display.textContent = array[0]
     } 
     if (typeof array[2] === 'function' && array[1] === undefined) {
         array[1] = '2'
+        display.textContent += array[1]
     } else if (typeof array[1] === 'string') {
         array[1] += '2'
+        // display.textContent += array[1]
     }
+
+
+
     console.log(array)
 })
 
